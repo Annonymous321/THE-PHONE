@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulated Phone Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="phone-container">
+    <div id="phone">
+      <div id="top-bar">
+        <button id="hide-button" onclick="togglePhoneVisibility()">Hide</button>
+      </div>
+      <div id="screen">
+        <div id="settings">
+          <div class="setting" id="bluetooth" onclick="toggleSetting('Bluetooth')">Bluetooth: ON</div>
+          <div class="setting" id="wifi" onclick="toggleSetting('Wi-Fi')">Wi-Fi: Connected</div>
+          <div class="setting" id="time">Current Time: <span id="current-time">Loading...</span></div>
+          <div class="setting" id="battery">Battery Life: <span id="battery-life">100%</span></div>
+        </div>
+
+        <div id="background-settings">
+          <h3>Background Settings</h3>
+          <input type="range" id="brightness-slider" min="10" max="100" value="100" />
+          <div>
+            <label for="background-image">Custom Background Image:</label>
+            <input type="file" id="background-image" accept="image/*" onchange="handleImageUpload(event)" />
+          </div>
+          <img id="background-image" src="default_background.jpg" alt="Background Image" />
+        </div>
+
+        <h1>Welcome to My Simulated Phone Website</h1>
+        <p>This is a sample website displayed inside a simulated phone.</p>
+      </div>
+      <div id="arrow">&#9650;</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
